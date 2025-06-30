@@ -1,6 +1,6 @@
 resource "aws_security_group" "main" {
-  name        = "allow_tls"
-  description = "Allow TLS inbound traffic and all outbound traffic"
+  name        = var.sg_name
+  description = var.sg_description
   vpc_id      = aws_vpc.main.id
 
   tags = merge(
